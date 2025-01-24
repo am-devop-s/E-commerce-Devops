@@ -7,8 +7,10 @@ export default defineConfig({
 	server: {
 		proxy: {
 			"/api": {
-				target: "http://localhost:6000",
+				target: "http://backend:6000",
 			},
 		},
+		host: "0.0.0.0", // Allows access from any network (for local network access)
+		port: 3000, // Optional: specify the port you want Vite to run on
 	},
 });
